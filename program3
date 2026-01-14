@@ -1,0 +1,12 @@
+int[] deleteNth(int[] arr, int m, int n) {
+    int[] res = new int[m - 1];
+    int j = 0;
+
+    for (int i = 0; i < m; i++) {
+        if (i != n - 1) {   // skip nth element
+            res[j] = arr[i];
+            j++;
+        }
+    }
+    return res;
+}

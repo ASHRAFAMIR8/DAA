@@ -1,0 +1,15 @@
+int[] insertAtNth(int[] arr, int m, int n, int val) {
+    int[] res = new int[m + 1];
+
+    for (int i = 0; i < n - 1; i++) {
+        res[i] = arr[i];
+    }
+
+    res[n - 1] = val;
+
+    for (int i = n - 1; i < m; i++) {
+        res[i + 1] = arr[i];
+    }
+
+    return res;
+}
